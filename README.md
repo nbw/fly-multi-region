@@ -70,10 +70,27 @@ def start(_type, _args) do
 
 ### Repo
 
-Add the following to your projects main Repo module:
+Add `use FlyMultiRegion.Repo` to your projects main Repo module:
 
 ```elixir
+defmodule MyApp.Repo
+  ...
   use FlyMultiRegion.Repo
+end
+```
+
+### How to use it
+
+When ever making a read request with ecto, use `.replica()`
+
+Example:
+
+```elixir
+ # original
+ Repo.all(User)
+
+ # becomes
+ Repo.replica().all(User)
 ```
 
 ## Future Improvements
