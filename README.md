@@ -2,6 +2,11 @@
 
 A library for using Fly.io's Multi-Region Databases with Ecto.
 
+This library assumes that:
+
+- You have an app hosted on Fly.io
+- You've already created and configured read-replica databases on Fly. Refer to [Fly.io's documentation](https://fly.io/docs/getting-started/multi-region-databases/) for more information on how to do that.
+
 ### Warning
 
 It's likely that Fly will implement their own version of this library. So this library should serve as a proof-of-concept. There are a number of assumptions and improvements that could be made. Please use this library at your own risk and know that I never intended it to be used in production.

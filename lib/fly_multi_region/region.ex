@@ -1,9 +1,11 @@
 defmodule FlyMultiRegion.Region do
-  @moduledoc """
-  Helper module for Fly Regions
+  @moduledoc false
+  # """
+  # Helper module for Fly Regions
+  #
+  # [Fly Documenation](https://fly.io/docs/reference/regions/)
+  # """
 
-  [Fly Documenation](https://fly.io/docs/reference/regions/)
-  """
-
+  @doc false
   def current, do: Application.get_env(:fly_multi_region, :region)
 end
