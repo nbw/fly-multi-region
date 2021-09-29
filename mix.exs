@@ -8,7 +8,8 @@ defmodule FlyMultiRegion.MixProject do
       version: "0.0.1",
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
     ]
   end
 
@@ -24,6 +25,13 @@ defmodule FlyMultiRegion.MixProject do
     [
       {:ecto_sql, "~> 3.0"},
       {:ex_doc, "~> 0.24", only: :dev, runtime: false}
+    ]
+  end
+
+  defp package() do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/nbw/fly-multi-region"}
     ]
   end
 end
